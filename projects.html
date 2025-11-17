@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Chibuike Okerulu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Top Navigation -->
+
+    <header class="nav">
+  <div class="nav-brand">
+    <div class="avatar-wrapper">
+      <!-- Put your actual image here -->
+      <img
+        src="images/chibuike.jpg"
+        alt="Chibuike Okerulu"
+        class="avatar-img"
+      />
+    </div>
+    <div class="brand-text">
+      <span class="brand-name">Chibuike Okerulu (BK)</span>
+      <span class="brand-tagline">Data Analytics • BI • AI & ML</span>
+    </div>
+  </div>
+  <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="projects.html" class="nav-active">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+</header>
+
+    <main>
+
+      <!-- Projects Hero -->
+      <section class="section projects-hero">
+        <div class="projects-hero-inner">
+          <div>
+            <p class="hero-label">Project library</p>
+            <h1 class="hero-title">
+              Real world analytics projects across healthcare, mobility, and retail.
+            </h1>
+            <p class="hero-subtitle">
+              Each project is built end to end, from raw data and SQL models to Python analysis
+              and stakeholder friendly dashboards.
+            </p>
+          </div>
+
+          <div class="projects-hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Project types</span>
+              <span class="meta-value">Analytics, BI dashboards, forecasting, experiments</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Tech stack</span>
+              <span class="meta-value">Python, SQL, Power BI, Tableau, AWS, BigQuery</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid -->
+      <section id="projects" class="section">
+        <div class="section-header">
+          <h2>All projects</h2>
+          <p>Click into any project to see how the data, code, and business story connect.</p>
+        </div>
+
+        <!-- Simple filter chips (purely visual for now) -->
+        <div class="projects-filter">
+          <button class="filter-chip filter-chip-active">All</button>
+          <button class="filter-chip">Healthcare</button>
+          <button class="filter-chip">Mobility</button>
+          <button class="filter-chip">Retail</button>
+          <button class="filter-chip">Experiments</button>
+          <button class="filter-chip">Dashboards</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card-full">
+            <a href="#" class="project-thumb-link">
+              <!-- Replace src with your real thumbnail image -->
+              <img
+                src="images/uber-fleet-dashboard.jpg"
+                alt="Uber fleet analytics dashboard preview"
+                class="project-thumb"
+              />
+            </a>
+            <div class="project-body">
+              <div class="project-top-row">
+                <h3>Uber Fleet Insights Dashboard</h3>
+                <span class="project-pill">Mobility analytics</span>
+              </div>
+              <p class="project-desc">
+                Designed a star schema and Tableau dashboard to track trip volume, revenue per mile,
+                surge patterns, and driver performance for an Uber style fleet.
+              </p>
+              <ul class="project-bullets">
+                <li>Built a BigQuery warehouse with dim and fact tables for trips, vehicles, and locations.</li>
+                <li>Used SQL to create diagnostic views for long trips, intramonth growth, and surge behavior.</li>
+                <li>Created a dashboard that lets operations teams slice performance by city, time band, and vehicle type.</li>
+              </ul>
+              <div class="project-tags">
+                <span>BigQuery</span>
+                <span>SQL</span>
+                <span>Tableau</span>
+                <span>Fleet analytics</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card-full">
+            <a href="#" class="project-thumb-link">
+              <img
+                src="images/hospital-flow-insights.jpg"
+                alt="Hospital flow and ICU utilization dashboard preview"
+                class="project-thumb"
+              />
+            </a>
+            <div class="project-body">
+              <div class="project-top-row">
+                <h3>Hospital Flow Insights</h3>
+                <span class="project-pill">Healthcare analytics</span>
+              </div>
+              <p class="project-desc">
+                Modeled ICU bed utilization, length of stay, and admission patterns to help hospital
+                teams identify bottlenecks and free up capacity.
+              </p>
+              <ul class="project-bullets">
+                <li>Created a SQL star schema with fact_admissions and dimensions for patients, dates, and doctors.</li>
+                <li>Used Python and statistics to explore drivers of long stays and high bed occupancy.</li>
+                <li>Built a Power BI dashboard that highlights peak load periods and potential schedule improvements.</li>
+              </ul>
+              <div class="project-tags">
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>Healthcare data</span>
+                <span>Operations</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card-full">
+            <a href="#" class="project-thumb-link">
+              <img
+                src="images/ecommerce-sales-forecast.jpg"
+                alt="E commerce sales forecasting charts"
+                class="project-thumb"
+              />
+            </a>
+            <div class="project-body">
+              <div class="project-top-row">
+                <h3>E Commerce Sales and Customer Insights</h3>
+                <span class="project-pill">Retail analytics</span>
+              </div>
+              <p class="project-desc">
+                Analyzed a realistic online retail dataset to understand customer behavior, segment buyers,
+                and forecast revenue across product categories.
+              </p>
+              <ul class="project-bullets">
+                <li>Cleaned and enriched transaction data using Python, pandas, and feature engineering.</li>
+                <li>Built forecasting models in scikit learn to project monthly sales and identify key drivers.</li>
+                <li>Delivered a Power BI report that helped stakeholders plan marketing spend and inventory.</li>
+              </ul>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>pandas</span>
+                <span>scikit learn</span>
+                <span>Power BI</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card-full">
+            <a href="#" class="project-thumb-link">
+              <img
+                src="images/bakery-supply-chain.jpg"
+                alt="Bakery supply chain and inventory dashboard"
+                class="project-thumb"
+              />
+            </a>
+            <div class="project-body">
+              <div class="project-top-row">
+                <h3>Bakery Chain Procurement and Inventory</h3>
+                <span class="project-pill">Supply chain analytics</span>
+              </div>
+              <p class="project-desc">
+                Built an analytics layer for a fictional bakery chain to monitor suppliers, stock levels,
+                and distribution from warehouse to stores.
+              </p>
+              <ul class="project-bullets">
+                <li>Designed a data model that joins procurement, inventory, and sales data across regions.</li>
+                <li>Used SQL to calculate lead times, stockout risk, and the cost of carrying excess inventory.</li>
+                <li>Created a Power BI dashboard to track supplier performance and highlight product gaps.</li>
+              </ul>
+              <div class="project-tags">
+                <span>SQL</span>
+                <span>Data modeling</span>
+                <span>Power BI</span>
+                <span>Operations</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card-full">
+            <a href="#" class="project-thumb-link">
+              <img
+                src="images/megaline-tariff-analysis.jpg"
+                alt="Telecom tariff comparison and A B testing charts"
+                class="project-thumb"
+              />
+            </a>
+            <div class="project-body">
+              <div class="project-top-row">
+                <h3>Megaline Plan Revenue and Usage Study</h3>
+                <span class="project-pill">Product analytics</span>
+              </div>
+              <p class="project-desc">
+                Explored telecom call and data logs to compare user behavior across different plans and
+                test which tariff structure drives better revenue.
+              </p>
+              <ul class="project-bullets">
+                <li>Aggregated usage by month and plan to measure call minutes and data consumption.</li>
+                <li>Ran hypothesis tests in Python to compare average revenue between Surf and Ultimate plans.</li>
+                <li>Summarized outcomes for product stakeholders with clear visual comparisons and confidence intervals.</li>
+              </ul>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Statistics</span>
+                <span>Hypothesis testing</span>
+                <span>Product analytics</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card-full">
+            <a href="#" class="project-thumb-link">
+              <img
+                src="images/ai-ml-experiments.jpg"
+                alt="Machine learning experiments and feature importance plot"
+                class="project-thumb"
+              />
+            </a>
+            <div class="project-body">
+              <div class="project-top-row">
+                <h3>AI and Machine Learning Experiments</h3>
+                <span class="project-pill">AI and ML</span>
+              </div>
+              <p class="project-desc">
+                A collection of smaller machine learning projects from the TripleTen program, focused on
+                model training, evaluation, and practical feature engineering.
+              </p>
+              <ul class="project-bullets">
+                <li>Built models for classification and regression with scikit learn on real world style datasets.</li>
+                <li>Tuned hyperparameters, evaluated with cross validation, and compared model families.</li>
+                <li>Documented findings with charts and written summaries focused on business impact.</li>
+              </ul>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>scikit learn</span>
+                <span>ML pipelines</span>
+                <span>TripleTen</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Chibuike Okerulu · Data & Analytics Projects</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
