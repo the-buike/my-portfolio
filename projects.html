@@ -371,47 +371,6 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Google Forms contact form
-  const form = document.getElementById("contact-form");
-  const statusEl = document.getElementById("form-status");
-
-  if (form) {
-    const GOOGLE_FORM_ID =
-      "1FAIpQLSdEAQ70yjIahNP16XECglZCmZm1XGvZQpNR3Ea4BaDEwxsYQA";
-
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
-
-      const formData = new FormData(form);
-
-      try {
-        await fetch(
-          "https://docs.google.com/forms/d/e/" +
-            GOOGLE_FORM_ID +
-            "/formResponse",
-          {
-            method: "POST",
-            mode: "no-cors",
-            body: formData,
-          }
-        );
-
-        if (statusEl) {
-          statusEl.style.display = "block";
-          statusEl.textContent =
-            "Thanks for reaching out. Your message has been sent.";
-        }
-        form.reset();
-      } catch (error) {
-        if (statusEl) {
-          statusEl.style.display = "block";
-          statusEl.textContent =
-            "Something went wrong. Please try again or email me directly.";
-        }
-      }
-    });
-  }
-
   // Mobile nav toggle
   const navToggle = document.getElementById("nav-toggle");
   const mobileNav = document.getElementById("mobile-nav");
@@ -449,7 +408,35 @@
       link.addEventListener("click", closeMobileNav);
     });
   }
+
+  // View more / View less for project cards
+  const cards = Array.from(document.querySelectorAll(".project-card-full"));
+  const toggle = document.getElementById("projects-toggle");
+  const step = 4;
+  let visible = step;
+
+  function applyVisibility() {
+    if (!toggle || !cards.length) return;
+    cards.forEach((card, index) => {
+      card.style.display = index < visible ? "" : "none";
+    });
+    toggle.textContent = visible >= cards.length ? "View less" : "View more";
+  }
+
+  if (toggle && cards.length) {
+    toggle.addEventListener("click", () => {
+      if (visible >= cards.length) {
+        visible = step;
+      } else {
+        visible = Math.min(visible + step, cards.length);
+      }
+      applyVisibility();
+    });
+
+    applyVisibility();
+  }
 </script>
+
 
 </body>
 </html>
