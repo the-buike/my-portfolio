@@ -544,43 +544,92 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-  <script>
-  const GOOGLE_FORM_ID = "1FAIpQLSdEAQ70yjIahNP16XECglZCmZm1XGvZQpNR3Ea4BaDEwxsYQA";
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
+  // Google Forms contact form
   const form = document.getElementById("contact-form");
   const statusEl = document.getElementById("form-status");
 
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault();
+  if (form) {
+    const GOOGLE_FORM_ID =
+      "1FAIpQLSdEAQ70yjIahNP16XECglZCmZm1XGvZQpNR3Ea4BaDEwxsYQA";
 
-    const formData = new FormData(form);
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
 
-    try {
-      await fetch(
-        "https://docs.google.com/forms/d/e/" +
-          GOOGLE_FORM_ID +
-          "/formResponse",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: formData,
+      const formData = new FormData(form);
+
+      try {
+        await fetch(
+          "https://docs.google.com/forms/d/e/" +
+            GOOGLE_FORM_ID +
+            "/formResponse",
+          {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          }
+        );
+
+        if (statusEl) {
+          statusEl.style.display = "block";
+          statusEl.textContent =
+            "Thanks for reaching out. Your message has been sent.";
         }
-      );
+        form.reset();
+      } catch (error) {
+        if (statusEl) {
+          statusEl.style.display = "block";
+          statusEl.textContent =
+            "Something went wrong. Please try again or email me directly.";
+        }
+      }
+    });
+  }
 
-      statusEl.style.display = "block";
-      statusEl.textContent =
-        "Thanks for reaching out. Your message has been sent.";
+  // Mobile nav toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileBackdrop = document.getElementById("mobile-nav-backdrop");
 
-      form.reset();
-    } catch (error) {
-      statusEl.style.display = "block";
-      statusEl.textContent =
-        "Something went wrong. Please try again or email me directly.";
-    }
-  });
+  function closeMobileNav() {
+    if (!navToggle || !mobileNav || !mobileBackdrop) return;
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+    mobileBackdrop.classList.remove("is-open");
+  }
+
+  function openMobileNav() {
+    if (!navToggle || !mobileNav || !mobileBackdrop) return;
+    navToggle.classList.add("is-open");
+    navToggle.setAttribute("aria-expanded", "true");
+    mobileNav.classList.add("is-open");
+    mobileBackdrop.classList.add("is-open");
+  }
+
+  if (navToggle && mobileNav && mobileBackdrop) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.classList.contains("is-open");
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+
+    mobileBackdrop.addEventListener("click", closeMobileNav);
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileNav);
+    });
+  }
 </script>
+
 
 
 </body>
