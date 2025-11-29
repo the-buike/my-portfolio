@@ -11,30 +11,28 @@
   <div class="page">
 
     <!-- Top Navigation -->
-
     <header class="nav">
-  <div class="nav-brand">
-    <div class="avatar-wrapper">
-      <!-- Put your actual image here -->
-      <img
-        src="images/chibuike.jpg"
-        alt="Chibuike Okerulu"
-        class="avatar-img"
-      />
-    </div>
-    <div class="brand-text">
-      <span class="brand-name">Chibuike Okerulu (BK)</span>
-      <span class="brand-tagline">Data Analytics • BI • AI & ML</span>
-    </div>
-  </div>
-  <nav class="nav-links">
+      <div class="nav-brand">
+        <div class="avatar-wrapper">
+          <img
+            src="images/chibuike.jpg"
+            alt="Chibuike Okerulu"
+            class="avatar-img"
+          />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Chibuike Okerulu (BK)</span>
+          <span class="brand-tagline">Data Analytics • BI • AI &amp; ML</span>
+        </div>
+      </div>
+      <nav class="nav-links">
         <a href="index.html#about">About</a>
         <a href="index.html#experience">Experience</a>
         <a href="projects.html" class="nav-active">Projects</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#contact">Contact</a>
       </nav>
-</header>
+    </header>
 
     <main>
 
@@ -72,14 +70,14 @@
           <p>Click into any project to see how the data, code, and business story connect.</p>
         </div>
 
-        <!-- Simple filter chips (purely visual for now) -->
+        <!-- Simple filter chips (visual only for now) -->
         <div class="projects-filter">
-          <button class="filter-chip filter-chip-active">All</button>
-          <button class="filter-chip">Healthcare</button>
-          <button class="filter-chip">Mobility</button>
-          <button class="filter-chip">Retail</button>
-          <button class="filter-chip">Experiments</button>
-          <button class="filter-chip">Dashboards</button>
+          <button class="filter-chip filter-chip-active" type="button">All</button>
+          <button class="filter-chip" type="button">Healthcare</button>
+          <button class="filter-chip" type="button">Mobility</button>
+          <button class="filter-chip" type="button">Retail</button>
+          <button class="filter-chip" type="button">Experiments</button>
+          <button class="filter-chip" type="button">Dashboards</button>
         </div>
 
         <div class="projects-grid">
@@ -87,7 +85,6 @@
           <!-- Project 1 -->
           <article class="project-card-full">
             <a href="#" class="project-thumb-link">
-              <!-- Replace src with your real thumbnail image -->
               <img
                 src="images/uber-fleet-dashboard.jpg"
                 alt="Uber fleet analytics dashboard preview"
@@ -278,17 +275,59 @@
           </article>
 
         </div>
+
+        <!-- View more / View less -->
+        <div class="projects-pagination">
+          <button id="toggle-projects" class="btn ghost" type="button">
+            View more
+          </button>
+        </div>
       </section>
 
     </main>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Chibuike Okerulu · Data & Analytics Projects</p>
+      <p>© <span id="year"></span> Chibuike Okerulu · Data &amp; Analytics Projects</p>
     </footer>
   </div>
 
   <script>
+    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // View more / View less logic
+    const projectCards = Array.from(document.querySelectorAll(".project-card-full"));
+    const toggleBtn = document.getElementById("toggle-projects");
+    const step = 4;
+    let visibleCount = step;
+
+    function updateProjects() {
+      projectCards.forEach((card, index) => {
+        if (index < visibleCount) {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      if (visibleCount >= projectCards.length) {
+        toggleBtn.textContent = "View less";
+      } else {
+        toggleBtn.textContent = "View more";
+      }
+    }
+
+    toggleBtn.addEventListener("click", function () {
+      if (visibleCount >= projectCards.length) {
+        visibleCount = step; // reset
+      } else {
+        visibleCount = Math.min(visibleCount + step, projectCards.length);
+      }
+      updateProjects();
+    });
+
+    // Initial state on load
+    updateProjects();
   </script>
 </body>
 </html>
