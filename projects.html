@@ -365,30 +365,91 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-    const cards = Array.from(document.querySelectorAll(".project-card-full"));
-    const toggle = document.getElementById("projects-toggle");
-    const step = 4;
-    let visible = step;
+  // Google Forms contact form
+  const form = document.getElementById("contact-form");
+  const statusEl = document.getElementById("form-status");
 
-    function applyVisibility() {
-      cards.forEach((card, index) => {
-        card.style.display = index < visible ? "" : "none";
-      });
-      toggle.textContent = visible >= cards.length ? "View less" : "View more";
-    }
+  if (form) {
+    const GOOGLE_FORM_ID =
+      "1FAIpQLSdEAQ70yjIahNP16XECglZCmZm1XGvZQpNR3Ea4BaDEwxsYQA";
 
-    toggle.addEventListener("click", () => {
-      if (visible >= cards.length) {
-        visible = step;
-      } else {
-        visible = Math.min(visible + step, cards.length);
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        await fetch(
+          "https://docs.google.com/forms/d/e/" +
+            GOOGLE_FORM_ID +
+            "/formResponse",
+          {
+            method: "POST",
+            mode: "no-cors",
+            body: formData,
+          }
+        );
+
+        if (statusEl) {
+          statusEl.style.display = "block";
+          statusEl.textContent =
+            "Thanks for reaching out. Your message has been sent.";
+        }
+        form.reset();
+      } catch (error) {
+        if (statusEl) {
+          statusEl.style.display = "block";
+          statusEl.textContent =
+            "Something went wrong. Please try again or email me directly.";
+        }
       }
-      applyVisibility();
+    });
+  }
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileBackdrop = document.getElementById("mobile-nav-backdrop");
+
+  function closeMobileNav() {
+    if (!navToggle || !mobileNav || !mobileBackdrop) return;
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+    mobileBackdrop.classList.remove("is-open");
+  }
+
+  function openMobileNav() {
+    if (!navToggle || !mobileNav || !mobileBackdrop) return;
+    navToggle.classList.add("is-open");
+    navToggle.setAttribute("aria-expanded", "true");
+    mobileNav.classList.add("is-open");
+    mobileBackdrop.classList.add("is-open");
+  }
+
+  if (navToggle && mobileNav && mobileBackdrop) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.classList.contains("is-open");
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
-    applyVisibility();
-  </script>
+    mobileBackdrop.addEventListener("click", closeMobileNav);
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileNav);
+    });
+  }
+</script>
+
 </body>
 </html>
