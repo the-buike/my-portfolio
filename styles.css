@@ -971,6 +971,10 @@ body {
     display: none;
   }
 
+  .nav-toggle {
+    display: flex;
+  }
+
   .site {
     padding-inline: 14px;
   }
@@ -992,10 +996,12 @@ body {
   }
 }
 
+
 #form-status {
   margin-top: 8px;
   font-size: 0.8rem;
   color: #bbf7d0; /* soft green */
 }
+
 
 
