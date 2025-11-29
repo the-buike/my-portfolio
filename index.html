@@ -12,31 +12,58 @@
 
     <!-- Top Nav -->
     <header class="top-nav">
-      <div class="top-nav-inner">
-        <a href="#hero" class="brand">
-          <div class="brand-avatar">
-            <!-- Your photo -->
-            <img
-              src="images/chibuike.jpg"
-              alt="Portrait of Chibuike Okerulu"
-            />
-          </div>
-          <div class="brand-text">
-            <span class="brand-name">Chibuike Okerulu (BK)</span>
-            <span class="brand-tagline">Data Analytics · BI · AI and ML</span>
-          </div>
-        </a>
-        <nav class="main-nav">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-          <a href="projects.html" class="pill-link">All projects</a>
-        </nav>
+  <div class="top-nav-inner">
+    <a href="#hero" class="brand">
+      <div class="brand-avatar">
+        <img
+          src="images/chibuike.jpg"
+          alt="Portrait of Chibuike Okerulu"
+        />
       </div>
-    </header>
+      <div class="brand-text">
+        <span class="brand-name">Chibuike Okerulu (BK)</span>
+        <span class="brand-tagline">Data Analytics · BI · AI and ML</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav (unchanged) -->
+    <nav class="main-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="projects.html" class="pill-link">All projects</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile slide out nav -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="projects.html">All projects</a>
+  </nav>
+</header>
+
 
     <main>
 
