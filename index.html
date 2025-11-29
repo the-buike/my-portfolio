@@ -2,436 +2,559 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chibuike Okerulu | Data & Analytics Portfolio</title>
+  <title>Chibuike Okerulu • Data Analytics Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="page">
+  <div class="site">
 
-    <!-- Top Navigation -->
-<header class="nav">
-  <div class="nav-brand">
-    <div class="avatar-wrapper">
-      <!-- Put your actual image here -->
-      <img
-        src="images/chibuike.jpg"
-        alt="Chibuike Okerulu"
-        class="avatar-img"
-      />
-    </div>
-    <div class="brand-text">
-      <span class="brand-name">Chibuike Okerulu (BK)</span>
-      <span class="brand-tagline">Data Analytics • BI • AI & ML</span>
-    </div>
-  </div>
-  <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <!-- Top Nav -->
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a href="#hero" class="brand">
+          <div class="brand-avatar">
+            <!-- Your photo -->
+            <img
+              src="images/chibuike.jpg"
+              alt="Portrait of Chibuike Okerulu"
+            />
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Chibuike Okerulu (BK)</span>
+            <span class="brand-tagline">Data Analytics · BI · AI and ML</span>
+          </div>
+        </a>
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a href="projects.html" class="pill-link">All projects</a>
+        </nav>
+      </div>
+    </header>
 
     <main>
 
-      <!-- Hero / Intro -->
-      <section class="hero">
-        <div class="hero-main">
-          <p class="hero-label">Data Analyst & BI Consultant</p>
-          <h1 class="hero-title">
-            Turning data into decisions for tech, retail, and healthcare teams.
-          </h1>
-          <p class="hero-subtitle">
-            I am a data analyst with a psychology background who loves building
-            analytics solutions that people actually use. From SQL models and ETL
-            pipelines to Power BI dashboards and forecasting in Python, I help teams
-            move from scattered data to clear, confident decisions.
-          </p>
+      <!-- Hero / Summary -->
+      <section id="hero" class="section hero">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <p class="eyebrow">Data analytics and BI consultant</p>
+            <h1 class="hero-title">
+              Turning messy datasets into clear, decision ready stories.
+            </h1>
+            <p class="hero-lead">
+              I use SQL, Python, and modern BI tools to build dashboards and models
+              that answer real business questions for healthcare, mobility, and retail teams.
+            </p>
 
-          <div class="hero-meta">
-            <div class="meta-item">
-              <span class="meta-label">Location</span>
-              <span class="meta-value">Douglasville, GA (Remote friendly)</span>
+            <div class="hero-meta-grid">
+              <div class="hero-meta-card">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Douglasville, GA · Open to remote and hybrid</span>
+              </div>
+              <div class="hero-meta-card">
+                <span class="meta-label">Focus areas</span>
+                <span class="meta-value">Healthcare, mobility, ecommerce, operations</span>
+              </div>
+              <div class="hero-meta-card">
+                <span class="meta-label">Core tools</span>
+                <span class="meta-value">SQL, Python, Power BI, Tableau, BigQuery, AWS</span>
+              </div>
             </div>
-            <div class="meta-item">
-              <span class="meta-label">Current focus</span>
-              <span class="meta-value">AI & Machine Learning with TripleTen</span>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View featured projects</a>
+              <a href="#contact" class="btn btn-ghost">Contact me</a>
             </div>
           </div>
 
-          <div class="hero-actions">
-            <a href="#contact" class="btn primary">Let us work together</a>
-            <a href="#projects" class="btn ghost">View projects</a>
-          </div>
+          <aside class="hero-side">
+            <div class="hero-side-card highlight">
+              <div class="highlight-number">3+</div>
+              <div class="highlight-text">
+                Years building analytics pipelines, dashboards, and models for tech and healthcare teams.
+              </div>
+            </div>
+
+            <div class="hero-side-card">
+              <h2 class="side-title">Quick details</h2>
+              <ul class="side-list">
+                <li>
+                  <span>Email</span>
+                  <a href="mailto:bukkyokerulu@gmail.com">bukkyokerulu@gmail.com</a>
+                </li>
+                <li>
+                  <span>Phone</span>
+                  <span>404 422 2737</span>
+                </li>
+                <li>
+                  <span>LinkedIn</span>
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                    Profile link
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
-
-        <aside class="hero-side">
-          <div class="card contact-card">
-            <h2 class="card-title">Quick details</h2>
-            <ul class="contact-list">
-              <li>
-                <span class="contact-label">Email</span>
-                <a href="mailto:bukkyokerulu@gmail.com">bukkyokerulu@gmail.com</a>
-              </li>
-              <li>
-                <span class="contact-label">Phone</span>
-                <a href="tel:14044222737">+1 (404) 422 2737</a>
-              </li>
-              <li>
-                <span class="contact-label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/chibuike-okerulu/" target="_blank" rel="noreferrer">
-                  /in/chibuike-okerulu
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="card highlight-card">
-            <p class="highlight-number">25%</p>
-            <p class="highlight-text">
-              Boosted data quality across client reporting by building robust SQL and ETL workflows.
-            </p>
-          </div>
-
-          <div class="card highlight-card">
-            <p class="highlight-number">40%</p>
-            <p class="highlight-text">
-              Reduced manual reporting time with automated, executive friendly Power BI dashboards.
-            </p>
-          </div>
-        </aside>
       </section>
 
       <!-- About -->
       <section id="about" class="section">
-        <div class="section-header">
-          <h2>About</h2>
-          <p>
-            I connect data, business context, and human behavior to build analytics that land with stakeholders.
+        <header class="section-header">
+          <p class="eyebrow">About</p>
+          <h2>Psychology, data, and clear communication.</h2>
+          <p class="section-subtitle">
+            I bring a mix of psychology, statistics, and hands on analytics experience into every project.
           </p>
-        </div>
+        </header>
+
         <div class="about-grid">
           <div>
+            <div class="about-photo-card">
+              <div class="about-photo-wrap">
+                <img
+                  src="images/chibuike.jpg"
+                  alt="Portrait of Chibuike Okerulu"
+                />
+              </div>
+              <p class="about-photo-caption">
+                Chibuike Okerulu (BK) · Data analytics and BI consultant based in Douglasville, GA.
+              </p>
+            </div>
+
             <p>
-              My journey into data started through psychology. While studying
-              research methods, statistics, and quantitative psychology, I learned
-              how to design studies, work with messy human data, and explain
-              complex patterns in a way that makes sense to non technical people.
+              My path into data started in psychology. Through research methods and statistics, I learned how
+              to design studies, work with messy human data, and explain complex patterns to non technical people.
             </p>
             <p>
-              Today, I work as a Data Analyst and BI Consultant, using SQL, Python,
-              and modern cloud tools to serve both tech and healthcare teams.
-              I care about clean data models, clear dashboards, and simple stories
-              that help stakeholders make decisions instead of staring at charts.
+              Today I work as a Data Analyst and BI Consultant. I build clean data models, SQL pipelines,
+              and dashboards that help teams see what is happening in their business and what to do next.
+            </p>
+            <p>
+              I enjoy collaborating with product managers, clinicians, and executives, clarifying the real question
+              behind a request, then turning it into something measurable and trackable.
             </p>
           </div>
+
           <div class="about-pill-grid">
-            <div class="pill-card">
+            <article class="pill-card">
+              <h3>How I work</h3>
+              <ul>
+                <li>Start with the business question and define success clearly.</li>
+                <li>Design data models and dashboards around that question.</li>
+                <li>Translate insights into simple, concrete next steps.</li>
+              </ul>
+            </article>
+            <article class="pill-card">
               <h3>What I enjoy</h3>
               <ul>
-                <li>Designing data models that match real workflows</li>
-                <li>Building dashboards that answer real questions</li>
-                <li>Connecting domain experts with data they trust</li>
+                <li>Structuring messy datasets into reliable, reusable models.</li>
+                <li>Pairing SQL and Python with tools like Power BI and Tableau.</li>
+                <li>Teaching stakeholders how to read and trust the data.</li>
               </ul>
-            </div>
-            <div class="pill-card">
+            </article>
+            <article class="pill-card">
               <h3>Domains</h3>
               <ul>
                 <li>Healthcare analytics (ICD 10, EHR data)</li>
-                <li>Retail and e commerce analytics</li>
-                <li>Business intelligence and reporting</li>
+                <li>Retail and ecommerce analytics</li>
+                <li>Mobility, fleet, and operations analytics</li>
               </ul>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- Experience -->
       <section id="experience" class="section">
-        <div class="section-header">
-          <h2>Experience</h2>
-          <p>Recent roles where I shipped real analytics outcomes, not just reports.</p>
-        </div>
+        <header class="section-header">
+          <p class="eyebrow">Experience</p>
+          <h2>Recent roles and impact.</h2>
+          <p class="section-subtitle">
+            A sample of how I have applied analytics, BI, and experimentation in the real world.
+          </p>
+        </header>
 
         <div class="timeline">
-          <article class="timeline-card">
-            <header class="timeline-header">
+          <article class="timeline-item">
+            <div class="timeline-heading">
               <div>
                 <h3>Zozzah Tech</h3>
-                <p class="timeline-role">Data Analyst & BI Consultant</p>
+                <p class="timeline-role">Data Analyst and BI Consultant · Remote</p>
               </div>
-              <span class="timeline-meta">Jan 2022 – Present · Remote</span>
-            </header>
-            <ul class="timeline-list">
-              <li>
-                Wrote complex SQL across PostgreSQL and MySQL and built ETL pipelines
-                to unify messy data sources, improving data quality by about 25 percent
-                and making cross team reporting consistent.
-              </li>
-              <li>
-                Created automated Power BI dashboards on top of AWS (S3, Glue, Redshift)
-                to give executives near real time visibility and cut manual reporting work by 40 percent.
-              </li>
-              <li>
-                Used Python, scikit learn, SciPy, and Statsmodels for forecasting and
-                statistical analysis that surfaced trends and guided strategic decisions.
-              </li>
-              <li>
-                Partnered with stakeholders to translate business questions into analytics
-                solutions that combine data storytelling with solid statistical reasoning.
-              </li>
+              <span class="timeline-dates">Jan 2022 · Present</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Wrote advanced SQL across PostgreSQL and MySQL to pull and clean client data, improving data quality and cross team reporting.</li>
+              <li>Built automated Power BI dashboards on top of AWS (S3, Glue, Redshift) so leaders could track performance in near real time.</li>
+              <li>Used Python, scikit learn, SciPy, and Statsmodels for forecasting and statistical testing that guided pricing and operations decisions.</li>
+              <li>Partnered with stakeholders to shape analytics questions, translate them into models, and present clear visual stories.</li>
             </ul>
           </article>
 
-          <article class="timeline-card">
-            <header class="timeline-header">
+          <article class="timeline-item">
+            <div class="timeline-heading">
               <div>
                 <h3>Family Health International</h3>
-                <p class="timeline-role">Data Analyst & Technical Support Specialist</p>
+                <p class="timeline-role">Data Analyst and Technical Support Specialist · Remote</p>
               </div>
-              <span class="timeline-meta">Sep 2021 – Aug 2022 · Remote</span>
-            </header>
-            <ul class="timeline-list">
-              <li>
-                Analyzed clinical datasets with SQL and Python, working with ICD 10
-                diagnosis codes and patient metrics to spot patterns that informed
-                evidence based decisions.
-              </li>
-              <li>
-                Ran regression and clustering analyses on patient outcomes to flag early
-                risk signals and support timely intervention planning.
-              </li>
-              <li>
-                Built and maintained Power BI dashboards on top of Google BigQuery,
-                tracking patient flow and key operational metrics, which improved
-                team efficiency and issue detection.
-              </li>
-              <li>
-                Trained medical staff on using data tools properly, which reduced support
-                tickets and improved data entry and reporting quality.
-              </li>
+              <span class="timeline-dates">Sep 2021 · Aug 2022</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Analyzed clinical datasets with SQL and Python, using ICD 10 coding to understand patient outcomes and utilization patterns.</li>
+              <li>Created Power BI dashboards on BigQuery that gave clinical leadership a clear view of program performance.</li>
+              <li>Supported medical staff on data tools and dashboards, reducing recurring support tickets and improving data literacy.</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <!-- Projects -->
-<section id="projects" class="section">
-  <div class="section-header">
-    <h2>Selected projects</h2>
-    <p>Hands on projects where I designed pipelines, models, and dashboards end to end.</p>
-  </div>
+      <!-- Projects (Featured) -->
+      <section id="projects" class="section">
+        <header class="section-header">
+          <p class="eyebrow">Projects</p>
+          <h2>Featured projects.</h2>
+          <p class="section-subtitle">
+            Two end to end projects that show how I connect data, code, and business context.
+          </p>
+        </header>
 
-  
-
-  <div class="card-grid">
-    <article class="card project-card">
-      <div class="card-chip">Retail analytics</div>
-      <h3>E Commerce Sales Optimization</h3>
-      <p class="project-text">
-        Analyzed over fifty thousand transactions to uncover seasonal patterns,
-        segment customers, and support better inventory and marketing decisions.
-      </p>
-      <ul class="project-points">
-        <li>
-          Used Python (pandas, NumPy) to explore buying behavior and identify
-          high value customer segments.
-        </li>
-        <li>
-          Built forecasting models with scikit learn that predicted monthly revenue
-          with about 85 percent accuracy and highlighted key product categories.
-        </li>
-        <li>
-          Designed Power BI dashboards that gave leadership clear visibility into
-          trends, budget allocation, and stock planning.
-        </li>
-      </ul>
-      <div class="project-tags">
-        <span>Python</span>
-        <span>pandas</span>
-        <span>Forecasting</span>
-        <span>Power BI</span>
-      </div>
-    </article>
-
-    <article class="card project-card">
-      <div class="card-chip">Healthcare analytics</div>
-      <h3>Hospital Flow Insights</h3>
-      <p class="project-text">
-        Built a data model and dashboard to understand ICU bed usage, length of stay,
-        and admission patterns for hospital operations teams.
-      </p>
-      <ul class="project-points">
-        <li>
-          Created a SQL data model to track bed utilization, patient journeys,
-          and admission trends.
-        </li>
-        <li>
-          Ran exploratory and statistical analysis to uncover bottlenecks in patient
-          flow and resource usage.
-        </li>
-        <li>
-          Built a Power BI dashboard that helped teams improve scheduling and bring
-          down average length of stay.
-        </li>
-      </ul>
-      <div class="project-tags">
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Operations</span>
-        <span>Healthcare</span>
-      </div>
-    </article>
-  </div>
-  <br>
-  <!-- View all projects button -->
-  <div class="hero-actions">
-    <a href="projects.html" class="btn ghost">View all projects</a>
-  </div>
-</section>
-
-
-      <!-- Skills -->
-      <section id="skills" class="section">
-        <div class="section-header">
-          <h2>Skills</h2>
-          <p>A snapshot of the tools and domains I work with most often.</p>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skills-group">
-            <h3>Analytics & modeling</h3>
-            <p>Python, statistics, and machine learning for real business questions.</p>
-            <div class="skills-chips">
+        <div class="featured-grid">
+          <article class="project-card">
+            <div class="project-tag">Retail analytics</div>
+            <h3>Ecommerce Sales and Customer Insights</h3>
+            <p>
+              Analyzed a realistic online retail dataset to understand customer behavior, segment buyers,
+              and forecast revenue across product categories.
+            </p>
+            <ul class="project-list">
+              <li>Cleaned and enriched transaction data using Python, pandas, and feature engineering.</li>
+              <li>Trained forecasting models to project monthly sales and identify key revenue drivers.</li>
+              <li>Delivered a Power BI report for marketing and inventory planning.</li>
+            </ul>
+            <div class="pill-row">
               <span>Python</span>
               <span>pandas</span>
-              <span>NumPy</span>
               <span>scikit learn</span>
-              <span>SciPy</span>
-              <span>Statsmodels</span>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <h3>Data platforms & SQL</h3>
-            <p>From raw tables to clean, queryable datasets and metrics.</p>
-            <div class="skills-chips">
-              <span>SQL (Advanced)</span>
-              <span>PostgreSQL</span>
-              <span>MySQL</span>
-              <span>BigQuery</span>
-              <span>ETL workflows</span>
-              <span>Data pipelines</span>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <h3>BI & tooling</h3>
-            <p>Dashboards and reporting tools that non technical users can trust.</p>
-            <div class="skills-chips">
               <span>Power BI</span>
-              <span>Tableau</span>
-              <span>Excel</span>
-              <span>AWS (S3, Glue, Redshift)</span>
-              <span>Git & GitHub</span>
-              <span>Jira</span>
-              <span>Salesforce</span>
-              <span>HubSpot</span>
             </div>
-          </div>
+          </article>
 
-          <div class="skills-group">
-            <h3>Healthcare & interests</h3>
-            <p>Blending domain knowledge with analytics for better outcomes.</p>
-            <div class="skills-chips">
-              <span>EHR/EMR systems</span>
-              <span>ICD 10 analytics</span>
-              <span>Healthcare data</span>
-              <span>Predictive modeling</span>
-              <span>Data storytelling</span>
+          <article class="project-card">
+            <div class="project-tag">Healthcare analytics</div>
+            <h3>Hospital Flow Insights</h3>
+            <p>
+              Modeled ICU bed utilization, length of stay, and admission patterns to help hospital teams
+              identify bottlenecks and free up capacity.
+            </p>
+            <ul class="project-list">
+              <li>Designed a SQL star schema for admissions, patients, doctors, and dates.</li>
+              <li>Used Python and statistics to explore drivers of long stays and high occupancy.</li>
+              <li>Built a Power BI dashboard that highlights peak load and capacity risk.</li>
+            </ul>
+            <div class="pill-row">
+              <span>SQL</span>
+              <span>Power BI</span>
+              <span>Healthcare</span>
             </div>
-          </div>
+          </article>
+        </div>
+
+        <div class="center-row">
+          <a href="projects.html" class="btn btn-ghost">View all projects</a>
         </div>
       </section>
 
       <!-- Education -->
-      <section class="section">
-        <div class="section-header">
-          <h2>Education & certifications</h2>
-        </div>
-        <div class="edu-grid">
-          <div class="edu-item">
-            <h3>Nnamdi Azikiwe University</h3>
-            <p class="edu-role">BS in Psychology</p>
-            <p class="edu-detail">
-              Relevant coursework: Statistics, Research Methods, Data Analysis, Quantitative Psychology.
-            </p>
-          </div>
+      <section id="education" class="section">
+        <header class="section-header">
+          <p class="eyebrow">Education</p>
+          <h2>Formal training.</h2>
+          <p class="section-subtitle">
+            Psychology, statistics, and structured programs in analytics and health data.
+          </p>
+        </header>
 
-          <div class="edu-item">
-            <h3>Certifications</h3>
+        <div class="edu-grid">
+          <article class="edu-card">
+            <h3>BSc Psychology</h3>
+            <p class="edu-institution">Nnamdi Azikiwe University</p>
+            <p>
+              Focused on statistics, research methods, and quantitative psychology. This shaped how
+              I design experiments, interpret results, and communicate with stakeholders.
+            </p>
+          </article>
+
+          <article class="edu-card">
+            <h3>Programs and certifications</h3>
             <ul class="edu-list">
-              <li>AI and Machine Learning (TripleTen) – ongoing</li>
-              <li>Health Data Literacy (UC Davis, Coursera)</li>
-              <li>Intro to Data Analysis (Coursera)</li>
+              <li>AI and Machine Learning · TripleTen</li>
+              <li>Health Data Literacy · University of California, Davis</li>
+              <li>Introduction to Data Analysis · Coursera</li>
             </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills with proficiency -->
+      <section id="skills" class="section">
+        <header class="section-header">
+          <p class="eyebrow">Skills</p>
+          <h2>Tools and proficiency.</h2>
+          <p class="section-subtitle">
+            A quick view of the tools I use most often and my level of comfort with each.
+          </p>
+        </header>
+
+        <div class="skills-layout">
+          <div class="skills-columns">
+            <div class="skills-column">
+              <h3>Data and analysis</h3>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>SQL</span>
+                  <span>Advanced</span>
+                </div>
+                <div class="skill-bar" style="--level: 90%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>Python (pandas, NumPy)</span>
+                  <span>Advanced</span>
+                </div>
+                <div class="skill-bar" style="--level: 85%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>scikit learn and Statsmodels</span>
+                  <span>Strong</span>
+                </div>
+                <div class="skill-bar" style="--level: 80%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>ETL design and data modeling</span>
+                  <span>Strong</span>
+                </div>
+                <div class="skill-bar" style="--level: 80%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-column">
+              <h3>BI and visualization</h3>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>Power BI</span>
+                  <span>Advanced</span>
+                </div>
+                <div class="skill-bar" style="--level: 90%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>Tableau</span>
+                  <span>Intermediate</span>
+                </div>
+                <div class="skill-bar" style="--level: 70%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>Excel</span>
+                  <span>Strong</span>
+                </div>
+                <div class="skill-bar" style="--level: 80%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-column">
+              <h3>Cloud and domain</h3>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>AWS (S3, Glue, Redshift)</span>
+                  <span>Comfortable</span>
+                </div>
+                <div class="skill-bar" style="--level: 75%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>BigQuery</span>
+                  <span>Comfortable</span>
+                </div>
+                <div class="skill-bar" style="--level: 75%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>Healthcare data (ICD 10, EHR)</span>
+                  <span>Strong</span>
+                </div>
+                <div class="skill-bar" style="--level: 80%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-header">
+                  <span>Git and GitHub</span>
+                  <span>Comfortable</span>
+                </div>
+                <div class="skill-bar" style="--level: 80%;">
+                  <div class="skill-fill"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="section section-contact">
-        <div class="section-header">
-          <h2>Contact</h2>
-          <p>Open to analytics, BI, and ML focused roles and collaborations.</p>
-        </div>
+      <section id="contact" class="section">
+        <header class="section-header">
+          <p class="eyebrow">Contact</p>
+          <h2>Let us work on something together.</h2>
+          <p class="section-subtitle">
+            Reach out if you have a role, project, or collaboration in mind.
+          </p>
+        </header>
 
         <div class="contact-grid">
           <div>
             <p>
-              If you are looking for someone who can move between stakeholder conversations,
-              data modeling, and dashboards without losing the bigger picture, I would love to talk.
+              If you are looking for someone who can move between SQL, Python, and BI tools while
+              keeping a strong focus on the business question, I would love to talk.
             </p>
-            <p>
-              Reach out for full time roles, consulting projects, or portfolio feedback.
-            </p>
-          </div>
-          <div class="contact-panel">
-            <div class="contact-line">
-              <span>Email</span>
-              <a href="mailto:bukkyokerulu@gmail.com">bukkyokerulu@gmail.com</a>
-            </div>
-            <div class="contact-line">
-              <span>Phone</span>
-              <a href="tel:14044222737">+1 (404) 422 2737</a>
-            </div>
-            <div class="contact-line">
-              <span>LinkedIn</span>
-              <a href="https://www.linkedin.com/in/chibuike-okerulu/" target="_blank" rel="noreferrer">
-                /in/chibuike-okerulu
-              </a>
-            </div>
-            <div class="contact-line">
-              <span>Location</span>
-              <span>Douglasville, GA · USA</span>
+            <div class="contact-panel">
+              <div class="contact-line">
+                <span>Email</span>
+                <a href="mailto:bukkyokerulu@gmail.com">bukkyokerulu@gmail.com</a>
+              </div>
+              <div class="contact-line">
+                <span>Phone</span>
+                <span>404 422 2737</span>
+              </div>
+              <div class="contact-line">
+                <span>Location</span>
+                <span>Douglasville, GA · USA</span>
+              </div>
             </div>
           </div>
+
+          <form class="contact-form" id="contact-form">
+  <h3>Quick message</h3>
+
+  <div class="form-field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      name="entry.804187401"
+      placeholder="Your name"
+      required
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      name="entry.2045048273"
+      placeholder="you@example.com"
+      required
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="entry.153429510"
+      rows="4"
+      placeholder="Tell me a bit about what you are working on."
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">
+    Send message
+  </button>
+
+  <p class="form-note" id="form-status" style="display: none;">
+    Thanks for reaching out. Your message has been sent.
+  </p>
+</form>
+
+
         </div>
       </section>
-
     </main>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Chibuike Okerulu · Data & Analytics Portfolio</p>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Chibuike Okerulu · Data analytics and BI</p>
     </footer>
   </div>
 
   <script>
-    // Simple year updater
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  const GOOGLE_FORM_ID = "1FAIpQLSdEAQ70yjIahNP16XECglZCmZm1XGvZQpNR3Ea4BaDEwxsYQA";
+
+  const form = document.getElementById("contact-form");
+  const statusEl = document.getElementById("form-status");
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      await fetch(
+        "https://docs.google.com/forms/d/e/" +
+          GOOGLE_FORM_ID +
+          "/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
+
+      statusEl.style.display = "block";
+      statusEl.textContent =
+        "Thanks for reaching out. Your message has been sent.";
+
+      form.reset();
+    } catch (error) {
+      statusEl.style.display = "block";
+      statusEl.textContent =
+        "Something went wrong. Please try again or email me directly.";
+    }
+  });
+</script>
+
+
 </body>
 </html>
