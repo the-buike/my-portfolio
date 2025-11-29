@@ -45,6 +45,19 @@ body {
   padding: 20px 16px 40px;
 }
 
+/* Soft entrance animation */
+
+@keyframes fadeUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Top nav */
 
 .top-nav {
@@ -61,7 +74,7 @@ body {
   gap: 12px;
   padding: 10px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
+  border: none;
   background: linear-gradient(
       135deg,
       rgba(15, 23, 42, 0.98),
@@ -70,6 +83,7 @@ body {
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 48px rgba(15, 23, 42, 0.95);
 }
+
 /* Mobile nav toggle (hidden on desktop) */
 .nav-toggle {
   display: none;
@@ -77,15 +91,14 @@ body {
   width: 34px;
   height: 34px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.7);
+  border: none;
   background: rgba(15, 23, 42, 0.98);
   padding: 0;
   cursor: pointer;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  transition: background 180ms ease-out, border-color 180ms ease-out,
-    transform 180ms ease-out;
+  transition: background 180ms ease-out, transform 180ms ease-out;
 }
 
 .nav-toggle span {
@@ -170,7 +183,6 @@ body {
   pointer-events: auto;
 }
 
-
 .brand {
   display: flex;
   align-items: center;
@@ -243,7 +255,11 @@ body {
 .pill-link {
   border-radius: 999px;
   border: 1px solid rgba(129, 140, 248, 0.7);
-  background: radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.4), rgba(15, 23, 42, 0.9));
+  background: radial-gradient(
+      circle at 0% 0%,
+      rgba(129, 140, 248, 0.4),
+      rgba(15, 23, 42, 0.9)
+    );
   color: var(--text-main);
 }
 
@@ -252,6 +268,7 @@ body {
 .section {
   padding-block: 28px;
   scroll-margin-top: 90px;
+  animation: fadeUpSoft 0.6s ease-out both;
 }
 
 .section-header {
@@ -339,7 +356,7 @@ body {
   background:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.2), transparent 52%),
     linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.96));
-  border: 1px solid rgba(148, 163, 184, 0.45);
+  border: none;
   box-shadow: var(--shadow-soft);
 }
 
@@ -397,7 +414,7 @@ body {
   border-radius: var(--radius-lg);
   padding: 16px 16px 14px;
   background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
+  border: none;
   box-shadow: var(--shadow-soft);
 }
 
@@ -463,7 +480,7 @@ body {
   background:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.4), transparent 60%),
     rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(148, 163, 184, 0.4);
+  border: none;
   margin-bottom: 16px;
   box-shadow: var(--shadow-soft);
 }
@@ -505,7 +522,8 @@ body {
   border-radius: var(--radius-lg);
   padding: 12px 14px;
   background: var(--bg-elevated);
-  border: 1px solid rgba(51, 65, 85, 1);
+  border: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .pill-card h3 {
@@ -531,9 +549,10 @@ body {
   border-radius: var(--radius-xl);
   padding: 16px 16px 14px;
   background: rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(51, 65, 85, 1);
+  border: none;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-soft);
 }
 
 .timeline-item::before {
@@ -600,8 +619,14 @@ body {
   background:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.16), transparent 60%),
     rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(129, 140, 248, 0.55);
+  border: none;
   box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 56px rgba(15, 23, 42, 0.96);
 }
 
 .project-tag {
@@ -669,7 +694,8 @@ body {
   border-radius: var(--radius-lg);
   padding: 14px 16px;
   background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
+  border: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .edu-card h3 {
@@ -702,7 +728,8 @@ body {
   background:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.22), transparent 60%),
     rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(129, 140, 248, 0.55);
+  border: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .skills-columns {
@@ -760,7 +787,8 @@ body {
   background:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.18), transparent 60%),
     rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(129, 140, 248, 0.6);
+  border: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-line {
@@ -795,7 +823,8 @@ body {
   border-radius: var(--radius-lg);
   padding: 14px 16px;
   background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
+  border: none;
+  box-shadow: var(--shadow-soft);
 }
 
 .contact-form h3 {
@@ -850,18 +879,17 @@ body {
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
+  border: none;
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-    border-color var(--transition-fast), background var(--transition-fast);
+    background var(--transition-fast);
 }
 
 .project-card-full:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 54px rgba(15, 23, 42, 0.96);
-  border-color: rgba(129, 140, 248, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.96);
   background:
     radial-gradient(circle at 0% 0%, rgba(129, 140, 248, 0.18), transparent 60%),
     rgba(15, 23, 42, 0.98);
@@ -936,6 +964,26 @@ body {
   text-align: center;
 }
 
+/* Staggered animation on cards */
+
+.timeline-item,
+.project-card,
+.project-card-full {
+  animation: fadeUpSoft 0.5s ease-out both;
+}
+
+.timeline-item:nth-child(2),
+.project-card:nth-child(2),
+.project-card-full:nth-child(2n) {
+  animation-delay: 0.08s;
+}
+
+.timeline-item:nth-child(3),
+.project-card:nth-child(3),
+.project-card-full:nth-child(3n) {
+  animation-delay: 0.14s;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -996,12 +1044,8 @@ body {
   }
 }
 
-
 #form-status {
   margin-top: 8px;
   font-size: 0.8rem;
   color: #bbf7d0; /* soft green */
 }
-
-
-
