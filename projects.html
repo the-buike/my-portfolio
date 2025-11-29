@@ -11,7 +11,7 @@
   <div class="site">
     <header class="top-nav">
   <div class="top-nav-inner">
-    <a href="#hero" class="brand">
+    <a href="index.html#hero" class="brand">
       <div class="brand-avatar">
         <img
           src="images/chibuike.jpg"
@@ -24,15 +24,14 @@
       </div>
     </a>
 
-    <!-- Desktop nav (unchanged) -->
+    <!-- Desktop nav specifically for projects page -->
     <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a href="projects.html" class="pill-link">All projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="projects.html" class="nav-current">Projects</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
 
     <!-- Mobile menu button -->
@@ -52,15 +51,15 @@
   <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
 
   <nav class="mobile-nav" id="mobile-nav">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-    <a href="projects.html">All projects</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
   </nav>
 </header>
+
 
 
     <main>
@@ -404,6 +403,7 @@
 
     mobileBackdrop.addEventListener("click", closeMobileNav);
 
+    // Close nav when a link is clicked
     mobileNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", closeMobileNav);
     });
@@ -436,6 +436,7 @@
     applyVisibility();
   }
 </script>
+
 
 
 </body>
