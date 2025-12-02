@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Experience • Chibuike Okerulu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site">
+    <header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html#hero" class="brand">
+      <div class="brand-avatar">
+        <img
+          src="images/chibuike.jpg"
+          alt="Portrait of Chibuike Okerulu"
+        />
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Chibuike Okerulu (BK)</span>
+        <span class="brand-tagline">Data Analytics · BI · AI and ML</span>
+      </div>
+    </a>
+
+    <!-- Desktop nav specifically for Experience page -->
+    <nav class="main-nav">
+      <a href="index.html#about">About</a>
+      <a href="experience.html" class="nav-current">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile slide out nav -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html#about">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+    <main>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <header class="section-header">
+          <p class="eyebrow">Experience</p>
+          <h2>Recent roles and impact.</h2>
+          <p class="section-subtitle">
+            A sample of how I have applied analytics, BI, and experimentation in the real world.
+          </p>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-heading">
+              <div>
+                <h3>Zozzah Tech</h3>
+                <p class="timeline-role">Data Analyst and BI Consultant · Remote</p>
+              </div>
+              <span class="timeline-dates">Jan 2022 · Present</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Wrote advanced SQL across PostgreSQL and MySQL to pull and clean client data, improving data quality and cross team reporting.</li>
+              <li>Built automated Power BI dashboards on top of AWS (S3, Glue, Redshift) so leaders could track performance in near real time.</li>
+              <li>Used Python, scikit learn, SciPy, and Statsmodels for forecasting and statistical testing that guided pricing and operations decisions.</li>
+              <li>Partnered with stakeholders to shape analytics questions, translate them into models, and present clear visual stories.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-heading">
+              <div>
+                <h3>Family Health International</h3>
+                <p class="timeline-role">Data Analyst and Technical Support Specialist · Remote</p>
+              </div>
+              <span class="timeline-dates">Sep 2021 · Aug 2022</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Analyzed clinical datasets with SQL and Python, using ICD 10 coding to understand patient outcomes and utilization patterns.</li>
+              <li>Created Power BI dashboards on BigQuery that gave clinical leadership a clear view of program performance.</li>
+              <li>Supported medical staff on data tools and dashboards, reducing recurring support tickets and improving data literacy.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Chibuike Okerulu · Data analytics and BI</p>
+    </footer>
+  </div>
+
+  <script>
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileBackdrop = document.getElementById("mobile-nav-backdrop");
+
+  function closeMobileNav() {
+    if (!navToggle || !mobileNav || !mobileBackdrop) return;
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+    mobileBackdrop.classList.remove("is-open");
+  }
+
+  function openMobileNav() {
+    if (!navToggle || !mobileNav || !mobileBackdrop) return;
+    navToggle.classList.add("is-open");
+    navToggle.setAttribute("aria-expanded", "true");
+    mobileNav.classList.add("is-open");
+    mobileBackdrop.classList.add("is-open");
+  }
+
+  if (navToggle && mobileNav && mobileBackdrop) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navToggle.classList.contains("is-open");
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+
+    mobileBackdrop.addEventListener("click", closeMobileNav);
+
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileNav);
+    });
+  }
+</script>
+
+</body>
+</html>
